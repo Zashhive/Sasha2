@@ -1,0 +1,218 @@
+/* === CSS Variables === */
+:root {
+    /* Primary Colors */
+    --soft-gold: #D4AF37;
+    --warm-gray: #8A8D91;
+
+    /* Accent Colors */
+    --champagne-beige: #F5E6CA;
+    --deep-charcoal: #333333;
+    --soft-white: #FAFAFA;
+
+    /* CTA Colors */
+    --emerald-green: #005F56;
+    --rosy-blush: #E9C4B3;
+
+    /* ... other variables ... */
+}
+
+/* === Reset & Base Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* === Header Styles === */
+.header {
+    background-color: var(--champagne-beige);
+    padding: 20px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h2 {
+    font-size: 2em;
+    margin: 0;
+}
+
+.logo span {
+    color: var(--soft-gold);
+}
+
+.nav-menu a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: var(--deep-charcoal);
+}
+
+/* === Hero Section Styles === */
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-video {
+    width: 100%;
+    height: auto;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.btn-primary {
+    background-color: var(--emerald-green);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: var(--rosy-blush);
+    color: white;
+}
+
+/* === Services Section Styles === */
+.services {
+    padding: 50px 0;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+}
+
+.service-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+}
+
+.service-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* === Testimonials Section Styles === */
+.testimonials {
+    padding: 50px 0;
+    background-color: #f5f5f5;
+}
+
+.testimonial-slider {
+    /* Add slider styles here */
+}
+
+.testimonial {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+/* === About Section Styles === */
+.about {
+    padding: 50px 0;
+}
+
+.about img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+/* === Contact Section Styles === */
+.contact {
+    padding: 50px 0;
+    background-color: #f5f5f5;
+}
+
+/* === Footer Styles === */
+.footer {
+    background-color: var(--deep-charcoal);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* === Responsive Styles === */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .mobile-toggle:hover {
+        color: var(--soft-gold);
+    }
+
+    .nav-menu.active {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--champagne-beige);
+        padding: 20px;
+    }
+
+    .nav-menu.active a {
+        display: block;
+        margin: 10px 0;
+    }
+}
